@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: User
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: 2222
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:80
+    volumes:
+      - .:/app
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
