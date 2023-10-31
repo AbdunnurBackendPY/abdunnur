@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'nur_func.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': '2222',
         'USER': ' User',
         'PASSWORD': '123456',
         'HOST': 'db',
